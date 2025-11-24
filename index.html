@@ -14,17 +14,8 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: {
-                            800: '#1E293B',
-                            900: '#0F172A',
-                        },
-                        brand: {
-                            cyan: '#5CE1E6',
-                            light: '#F8FAFC'
-                        },
-                        gold: {
-                            400: '#FFD700'
-                        }
+                        navy: { 800: '#1E293B', 900: '#0F172A' },
+                        brand: { cyan: '#5CE1E6', light: '#F8FAFC' },
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
@@ -38,18 +29,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* Estilos base para suavizar la navegación */
         body { font-family: 'Montserrat', sans-serif; }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-        
-        /* Ocultar secciones que no están activas */
         .page-section { display: none; animation: fadeIn 0.5s; }
         .page-section.active { display: block; }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
@@ -59,8 +43,8 @@
             <div class="flex justify-between h-24 items-center">
                 <div class="flex-shrink-0 flex items-center gap-4 cursor-pointer" onclick="navigateTo('home')">
                    <img src="http://menorahtothenations.com/wp-content/uploads/2025/09/cropped-cropped-4.png" alt="Logo" class="h-16 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); this.nextElementSibling.classList.add('flex');">
-                   <div class="hidden relative w-12 h-12 items-center justify-center bg-navy-800 rounded-full">
-                        <i data-lucide="menorah" class="text-brand-cyan"></i>
+                   <div class="hidden relative w-12 h-12 items-center justify-center bg-navy-800 rounded-full border border-brand-cyan">
+                        <i data-lucide="flame" class="text-brand-cyan"></i>
                    </div>
                    <div class="hidden lg:flex flex-col">
                         <span class="font-serif font-bold text-xl tracking-wider text-white">MENORAH</span>
@@ -96,10 +80,9 @@
     <div id="home" class="page-section active">
         <div class="relative bg-navy-900 text-white overflow-hidden">
             <div class="absolute inset-0 z-0 opacity-40">
-                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Ayuda" class="w-full h-full object-cover filter grayscale sepia-[.2] contrast-125">
+                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" class="w-full h-full object-cover filter grayscale sepia-[.2] contrast-125">
                 <div class="absolute inset-0 bg-navy-900/80 mix-blend-multiply"></div>
             </div>
-            
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-48 text-center">
                 <div class="inline-block mb-6 px-4 py-1 border border-brand-cyan/30 rounded-full bg-navy-900/50 backdrop-blur-sm">
                     <span class="text-brand-cyan text-xs font-bold tracking-[0.2em] uppercase">Registered 501(c)(3) Non-Profit</span>
@@ -118,6 +101,17 @@
             </div>
         </div>
 
+        <section class="py-20 bg-white relative text-center">
+            <div class="max-w-7xl mx-auto px-4">
+                 <i data-lucide="scroll-text" class="w-10 h-10 text-brand-cyan mx-auto mb-4"></i>
+                 <h2 class="text-3xl font-serif font-bold text-navy-900 mb-6">Nuestra Esencia</h2>
+                 <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
+                   Menorah for the Nations es una organización sin fines de lucro dedicada a vivir el mandato bíblico de cuidar a viudas y huérfanos. Operamos bajo los valores de la Torá y la guía rabínica.
+                 </p>
+                 <button onclick="navigateTo('mission')" class="text-navy-900 font-bold uppercase text-xs tracking-widest border-b-2 border-brand-cyan hover:text-brand-cyan transition-colors pb-1">Leer Misión Completa</button>
+            </div>
+        </section>
+
         <section class="py-24 bg-brand-light">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-20">
@@ -126,36 +120,98 @@
                 </div>
                 <div class="grid md:grid-cols-3 gap-10">
                     <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border-t-4 border-brand-cyan">
-                        <div class="w-16 h-16 bg-cyan-50 rounded-full flex items-center justify-center mb-8">
-                            <i data-lucide="heart" class="w-8 h-8 text-navy-900"></i>
-                        </div>
+                        <div class="w-16 h-16 bg-cyan-50 rounded-full flex items-center justify-center mb-8"><i data-lucide="heart" class="w-8 h-8 text-navy-900"></i></div>
                         <h3 class="text-2xl font-bold text-navy-900 mb-4">Apoyo a Viudas</h3>
-                        <p class="text-slate-600 mb-6">Brindamos dignidad y protección a través de asistencia financiera y apoyo espiritual.</p>
+                        <p class="text-slate-600 mb-6">Brindamos dignidad y protección a través de asistencia financiera y espiritual.</p>
                     </div>
                     <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border-t-4 border-navy-900">
-                        <div class="w-16 h-16 bg-navy-50 rounded-full flex items-center justify-center mb-8">
-                            <i data-lucide="users" class="w-8 h-8 text-navy-900"></i>
-                        </div>
+                        <div class="w-16 h-16 bg-navy-50 rounded-full flex items-center justify-center mb-8"><i data-lucide="users" class="w-8 h-8 text-navy-900"></i></div>
                         <h3 class="text-2xl font-bold text-navy-900 mb-4">Cuidado de Huérfanos</h3>
                         <p class="text-slate-600 mb-6">Construimos un futuro con propósito mediante educación y mentoría.</p>
                     </div>
                     <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border-t-4 border-brand-cyan">
-                        <div class="w-16 h-16 bg-cyan-50 rounded-full flex items-center justify-center mb-8">
-                            <i data-lucide="hand-heart" class="w-8 h-8 text-navy-900"></i>
-                        </div>
+                        <div class="w-16 h-16 bg-cyan-50 rounded-full flex items-center justify-center mb-8"><i data-lucide="hand-heart" class="w-8 h-8 text-navy-900"></i></div>
                         <h3 class="text-2xl font-bold text-navy-900 mb-4">Alcance Comunitario</h3>
                         <p class="text-slate-600 mb-6">Practicamos Tikkun Olam mediante alivio a la pobreza.</p>
                     </div>
                 </div>
+                <div class="mt-12 text-center">
+                     <button onclick="navigateTo('ministries')" class="bg-navy-900 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-navy-800 inline-flex items-center gap-2">
+                          Ver Todos los Ministerios <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                     </button>
+                </div>
             </div>
         </section>
         
-        <section class="bg-navy-900 py-20 relative overflow-hidden text-center px-4">
+        <section class="bg-navy-900 py-20 relative overflow-hidden text-center px-4 border-b border-brand-cyan/20">
             <i data-lucide="book-open" class="w-8 h-8 text-brand-cyan mx-auto mb-6 opacity-60"></i>
             <p class="text-2xl md:text-3xl font-serif italic text-white leading-relaxed mb-8 max-w-4xl mx-auto">
                 "Aprended a hacer el bien; buscad el juicio, restituid al agraviado, haced justicia al huérfano, amparad a la viuda."
             </p>
             <span class="text-brand-cyan font-bold tracking-[0.25em] uppercase text-sm">Isaías 1:17</span>
+        </section>
+
+        <section class="py-28 bg-white relative text-center">
+             <div class="max-w-7xl mx-auto px-4">
+                 <h2 class="text-4xl font-serif font-bold text-navy-900 mb-16">Nuestro Impacto</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                     <div class="p-8 rounded-xl bg-white border border-slate-100 shadow-lg">
+                        <i data-lucide="star" class="w-8 h-8 text-navy-900 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold text-navy-900">1 Misión</h3>
+                        <p class="text-slate-500 text-sm">Con huérfanos y viudas.</p>
+                     </div>
+                     <div class="p-8 rounded-xl bg-white border border-slate-100 shadow-lg">
+                        <i data-lucide="send" class="w-8 h-8 text-navy-900 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold text-navy-900">Primeros Viajes</h3>
+                        <p class="text-slate-500 text-sm">En preparación para impacto global.</p>
+                     </div>
+                     <div class="p-8 rounded-xl bg-white border border-slate-100 shadow-lg">
+                        <i data-lucide="handshake" class="w-8 h-8 text-navy-900 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold text-navy-900">100% Non-Profit</h3>
+                        <p class="text-slate-500 text-sm">Gestión transparente.</p>
+                     </div>
+                     <div class="p-8 rounded-xl bg-white border border-slate-100 shadow-lg">
+                        <i data-lucide="bird" class="w-8 h-8 text-navy-900 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold text-navy-900">Compromiso</h3>
+                        <p class="text-slate-500 text-sm">6 Proyectos en desarrollo.</p>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <section class="py-24 bg-navy-900 text-white relative">
+             <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+                 <div>
+                     <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-brand-cyan"></i>
+                        <span class="text-brand-cyan font-bold tracking-widest uppercase text-sm">Integridad</span>
+                     </div>
+                     <h2 class="text-4xl font-serif font-bold mb-6">Mayordomía Transparente</h2>
+                     <p class="text-slate-300 mb-6 leading-relaxed">Operamos bajo supervisión estricta y cumplimiento total con regulaciones 501(c)(3).</p>
+                     <ul class="space-y-4">
+                         <li class="flex items-center gap-4"><i data-lucide="check" class="text-brand-cyan"></i> Supervisión de la Junta</li>
+                         <li class="flex items-center gap-4"><i data-lucide="check" class="text-brand-cyan"></i> Cumplimiento IRS & OFAC</li>
+                     </ul>
+                 </div>
+                 <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                      <div class="flex justify-between border-b border-white/10 pb-4 mb-4">
+                          <span>Estatus Legal</span>
+                          <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs font-bold uppercase">Activo</span>
+                      </div>
+                      <div class="flex justify-between">
+                          <span>Tipo</span>
+                          <span class="text-slate-300">501(c)(3) Public Charity</span>
+                      </div>
+                 </div>
+             </div>
+        </section>
+
+        <section class="py-24 bg-brand-light text-center">
+            <h2 class="text-4xl font-serif font-bold text-navy-900 mb-6">¿Listo para hacer la diferencia?</h2>
+            <div class="flex justify-center gap-4">
+                <button onclick="navigateTo('contact')" class="bg-white text-navy-900 border border-slate-200 px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:border-brand-cyan transition-all">Contactar</button>
+                <button onclick="navigateTo('donate')" class="bg-brand-cyan text-navy-900 px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-cyan-400 shadow-lg">Donar Ahora</button>
+            </div>
         </section>
     </div>
 
@@ -164,12 +220,62 @@
             <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Nuestra Misión</h1>
             <div class="w-20 h-1 bg-brand-cyan mx-auto rounded-full"></div>
         </div>
-        <div class="max-w-4xl mx-auto px-4 py-20 text-slate-600 leading-relaxed text-lg">
-            <p class="mb-6"><strong class="text-navy-900">MENORAH FOR THE NATIONS</strong> es una corporación sin fines de lucro de Texas organizada para fines caritativos, religiosos y educativos.</p>
-            <h3 class="text-2xl font-bold text-navy-900 mt-10 mb-4">El Mandato Bíblico</h3>
-            <p class="mb-6">Nuestra misión es vivir el mandato bíblico de cuidar a las viudas y huérfanos, proporcionar ayuda compasiva a los pobres y equipar a las comunidades.</p>
-            <h3 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Raíces Judías</h3>
-            <p>Operamos profundamente arraigados en la práctica religiosa judía, los valores de la Torá y la guía del liderazgo rabínico.</p>
+        <div class="max-w-7xl mx-auto px-4 py-20 grid lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-4">
+                <div class="bg-brand-light p-8 rounded-2xl border border-brand-cyan/20 sticky top-32">
+                    <h3 class="font-serif font-bold text-navy-900 text-xl mb-6">En esta página</h3>
+                    <ul class="space-y-4 text-sm font-medium text-slate-600">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-brand-cyan rounded-full"></span> El Mandato Bíblico</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-slate-300 rounded-full"></span> Raíces Judías</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-slate-300 rounded-full"></span> Nuestros Valores</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-slate-300 rounded-full"></span> Junta Directiva</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lg:col-span-8 text-slate-600 leading-relaxed">
+                <p class="text-xl font-light text-navy-800 mb-8"><strong class="font-bold text-navy-900">MENORAH FOR THE NATIONS</strong> es una corporación sin fines de lucro de Texas organizada para fines caritativos, religiosos y educativos.</p>
+                
+                <h3 class="text-2xl font-serif font-bold text-navy-900 mt-12 mb-6">1. El Mandato Bíblico</h3>
+                <p class="mb-6">Nuestra misión es vivir el mandato bíblico de cuidar a las viudas y huérfanos, proporcionar ayuda compasiva a los pobres y equipar a las comunidades.</p>
+                
+                <h3 class="text-2xl font-serif font-bold text-navy-900 mt-12 mb-6">2. Raíces Judías</h3>
+                <div class="bg-navy-50 p-6 rounded-xl border-l-4 border-navy-900 mb-6 italic text-navy-800">"Operamos profundamente arraigados en la práctica religiosa judía y los valores de la Torá."</div>
+                <p>Buscamos preservar y promover los valores judíos de justicia y compasión.</p>
+
+                <h3 class="text-2xl font-serif font-bold text-navy-900 mt-12 mb-6">3. Valores Fundamentales</h3>
+                <div class="grid md:grid-cols-2 gap-6 mt-8">
+                     <div class="border border-slate-200 rounded-xl p-6">
+                        <i data-lucide="scale" class="text-brand-cyan w-10 h-10 mb-4"></i>
+                        <h4 class="font-bold text-navy-900 text-lg mb-2">Tzedaká (Justicia)</h4>
+                        <p class="text-sm">Caridad como acto de justicia.</p>
+                     </div>
+                     <div class="border border-slate-200 rounded-xl p-6">
+                        <i data-lucide="hand-heart" class="text-brand-cyan w-10 h-10 mb-4"></i>
+                        <h4 class="font-bold text-navy-900 text-lg mb-2">Jesed (Misericordia)</h4>
+                        <p class="text-sm">Amor leal en acción.</p>
+                     </div>
+                </div>
+
+                <h3 class="text-2xl font-serif font-bold text-navy-900 mt-12 mb-6">4. Junta Directiva</h3>
+                <p>Todas las operaciones se llevan a cabo bajo la supervisión de nuestra Junta Directiva.</p>
+                <div class="grid md:grid-cols-3 gap-8 mt-8">
+                     <div class="text-center">
+                         <div class="h-48 bg-slate-200 rounded-xl mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" class="w-full h-full object-cover grayscale hover:grayscale-0 transition"></div>
+                         <h4 class="font-bold text-navy-900">Miembro 1</h4>
+                         <p class="text-brand-cyan text-xs font-bold uppercase">Presidente</p>
+                     </div>
+                     <div class="text-center">
+                         <div class="h-48 bg-slate-200 rounded-xl mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" class="w-full h-full object-cover grayscale hover:grayscale-0 transition"></div>
+                         <h4 class="font-bold text-navy-900">Miembro 2</h4>
+                         <p class="text-brand-cyan text-xs font-bold uppercase">Tesorero</p>
+                     </div>
+                     <div class="text-center">
+                         <div class="h-48 bg-slate-200 rounded-xl mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" class="w-full h-full object-cover grayscale hover:grayscale-0 transition"></div>
+                         <h4 class="font-bold text-navy-900">Miembro 3</h4>
+                         <p class="text-brand-cyan text-xs font-bold uppercase">Secretario</p>
+                     </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -180,23 +286,33 @@
         </div>
         <div class="bg-brand-light py-20">
             <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg border-t-4 border-brand-cyan p-8">
+                <div class="bg-white rounded-xl shadow-lg border-t-4 border-brand-cyan p-8 group hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-cyan-50 rounded-full flex items-center justify-center mb-6"><i data-lucide="users" class="w-7 h-7 text-navy-900"></i></div>
                     <h3 class="text-2xl font-serif font-bold text-navy-900 mb-4">Fortalecimiento de los Santos</h3>
                     <p class="text-sm text-slate-600">Incluye viajes cortos y alianzas para reuniones comunitarias.</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg border-t-4 border-navy-900 p-8">
+                <div class="bg-white rounded-xl shadow-lg border-t-4 border-navy-900 p-8 group hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-navy-50 rounded-full flex items-center justify-center mb-6"><i data-lucide="baby" class="w-7 h-7 text-navy-900"></i></div>
                     <h3 class="text-2xl font-serif font-bold text-navy-900 mb-4">Apoyo a Huérfanos</h3>
                     <p class="text-sm text-slate-600">10% de todas las donaciones van dirigidas a este fin.</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg border-t-4 border-brand-cyan p-8">
-                    <h3 class="text-2xl font-serif font-bold text-navy-900 mb-4">Ayuda a Viudas</h3>
+                <div class="bg-white rounded-xl shadow-lg border-t-4 border-brand-cyan p-8 group hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-cyan-50 rounded-full flex items-center justify-center mb-6"><i data-lucide="heart" class="w-7 h-7 text-navy-900"></i></div>
+                    <h3 class="text-2xl font-serif font-bold text-navy-900 mb-4">Apoyo a Viudas</h3>
                     <p class="text-sm text-slate-600">Viajes de visitación y apoyo financiero constante.</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg border-t-4 border-navy-900 p-8">
-                    <h3 class="text-2xl font-serif font-bold text-navy-900 mb-4">Enseñanza a las Naciones</h3>
+                <div class="bg-white rounded-xl shadow-lg border-t-4 border-navy-900 p-8 group hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-navy-50 rounded-full flex items-center justify-center mb-6"><i data-lucide="hand-heart" class="w-7 h-7 text-navy-900"></i></div>
+                    <h3 class="text-2xl font-serif font-bold text-navy-900 mb-4">Apoyo a la Comunidad</h3>
+                    <p class="text-sm text-slate-600">Alivio a la pobreza (foco local sin viajes).</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg border-t-4 border-brand-cyan p-8 group hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-cyan-50 rounded-full flex items-center justify-center mb-6"><i data-lucide="book-open" class="w-7 h-7 text-navy-900"></i></div>
+                    <h3 class="text-2xl font-serif font-bold text-navy-900 mb-4">Enseñanza</h3>
                     <p class="text-sm text-slate-600">Viajes misioneros de enseñanza de la Palabra.</p>
                 </div>
-                 <div class="bg-white rounded-xl shadow-lg border-t-4 border-brand-cyan p-8">
+                 <div class="bg-white rounded-xl shadow-lg border-t-4 border-navy-900 p-8 group hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-navy-50 rounded-full flex items-center justify-center mb-6"><i data-lucide="globe" class="w-7 h-7 text-navy-900"></i></div>
                     <h3 class="text-2xl font-serif font-bold text-navy-900 mb-4">Ayuda Sefardí</h3>
                     <p class="text-sm text-slate-600">Ayuda con ciudadanía y aprendizaje de idiomas.</p>
                 </div>
@@ -209,15 +325,46 @@
             <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Contáctanos</h1>
             <p class="text-slate-300">info@menorahtothenations.org</p>
         </div>
-        <div class="max-w-3xl mx-auto px-4 py-20">
-            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-brand-cyan">
-                <form class="space-y-5">
+        <div class="max-w-7xl mx-auto px-4 py-20 grid lg:grid-cols-2 gap-16">
+            <div>
+                 <div class="space-y-8 mb-12">
+                     <div class="flex items-start gap-4">
+                         <div class="bg-brand-cyan/10 p-3 rounded-full text-navy-900"><i data-lucide="mail" class="w-6 h-6"></i></div>
+                         <div>
+                             <h3 class="font-bold text-navy-900 text-lg">Correo</h3>
+                             <p class="text-slate-600">info@menorahtothenations.org</p>
+                         </div>
+                     </div>
+                     <div class="flex items-start gap-4">
+                         <div class="bg-brand-cyan/10 p-3 rounded-full text-navy-900"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+                         <div>
+                             <h3 class="font-bold text-navy-900 text-lg">Ubicación</h3>
+                             <p class="text-slate-600">Texas, United States</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="bg-slate-100 h-64 rounded-2xl flex items-center justify-center text-slate-400">Mapa de Google Maps</div>
+            </div>
+            <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border-t-4 border-brand-cyan">
+                <form class="space-y-5" onsubmit="event.preventDefault(); alert('Mensaje enviado (Simulacion)');">
                     <div class="grid md:grid-cols-2 gap-5">
-                        <input type="text" placeholder="Nombre" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200">
-                        <input type="text" placeholder="Apellido" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200">
+                        <div class="space-y-2">
+                             <label class="font-bold text-navy-800 text-sm">Nombre</label>
+                             <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200">
+                        </div>
+                        <div class="space-y-2">
+                             <label class="font-bold text-navy-800 text-sm">Apellido</label>
+                             <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200">
+                        </div>
                     </div>
-                    <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200">
-                    <textarea placeholder="Mensaje" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 h-32"></textarea>
+                    <div class="space-y-2">
+                         <label class="font-bold text-navy-800 text-sm">Email</label>
+                         <input type="email" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200">
+                    </div>
+                    <div class="space-y-2">
+                         <label class="font-bold text-navy-800 text-sm">Mensaje</label>
+                         <textarea class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 h-32"></textarea>
+                    </div>
                     <button class="w-full bg-brand-cyan text-navy-900 py-4 rounded-full font-bold uppercase tracking-widest shadow-lg">Enviar Mensaje</button>
                 </form>
             </div>
@@ -225,19 +372,40 @@
     </div>
 
     <div id="donate" class="page-section">
-        <div class="bg-navy-900 py-16 text-center text-white">
+        <div class="bg-navy-900 py-16 text-center text-white relative">
             <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Haz tu Donación</h1>
             <p class="text-brand-cyan font-bold uppercase text-xs">Tu generosidad transforma vidas</p>
         </div>
-        <div class="max-w-xl mx-auto px-4 py-16 text-center">
-            <div class="bg-white rounded-2xl shadow-xl p-8 border border-slate-100">
-                <h3 class="text-navy-900 font-bold text-xl mb-6">Elige un monto</h3>
-                <div class="grid grid-cols-3 gap-4 mb-6">
-                    <button class="py-3 rounded-lg border-2 border-slate-200 hover:border-brand-cyan font-bold">$25</button>
-                    <button class="py-3 rounded-lg border-2 border-brand-cyan bg-cyan-50 font-bold">$50</button>
-                    <button class="py-3 rounded-lg border-2 border-slate-200 hover:border-brand-cyan font-bold">$100</button>
+        <div class="max-w-5xl mx-auto px-4 py-16 grid lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-7">
+                <div class="bg-white rounded-2xl shadow-xl p-8 border border-slate-100">
+                    <div class="flex border-b border-slate-100 mb-8">
+                         <button class="flex-1 py-4 font-bold border-b-2 border-brand-cyan text-navy-900">MENSUAL</button>
+                         <button class="flex-1 py-4 font-bold text-slate-400">UNA VEZ</button>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-xl mb-6">Elige un monto</h3>
+                    <div class="grid grid-cols-3 gap-4 mb-6">
+                        <button class="py-4 rounded-xl border-2 border-slate-200 font-bold text-lg hover:border-brand-cyan">$25</button>
+                        <button class="py-4 rounded-xl border-2 border-brand-cyan bg-cyan-50 font-bold text-lg text-navy-900">$50</button>
+                        <button class="py-4 rounded-xl border-2 border-slate-200 font-bold text-lg hover:border-brand-cyan">$100</button>
+                        <button class="py-4 rounded-xl border-2 border-slate-200 font-bold text-lg hover:border-brand-cyan">$250</button>
+                        <button class="py-4 rounded-xl border-2 border-slate-200 font-bold text-lg hover:border-brand-cyan">$500</button>
+                        <button class="py-4 rounded-xl border-2 border-slate-200 font-bold text-lg hover:border-brand-cyan">$1000</button>
+                    </div>
+                    <button class="w-full bg-brand-cyan text-navy-900 py-5 rounded-full font-bold uppercase tracking-widest shadow-lg text-lg">Donar Ahora</button>
                 </div>
-                <button class="w-full bg-brand-cyan text-navy-900 py-4 rounded-full font-bold uppercase tracking-widest shadow-lg">Donar con PayPal</button>
+            </div>
+            <div class="lg:col-span-5 space-y-8">
+                <div class="bg-navy-900 text-white p-8 rounded-2xl">
+                     <h3 class="font-serif font-bold text-xl mb-4">Tu impacto</h3>
+                     <p class="text-slate-300 text-sm mb-4">Estás ayudando directamente a cubrir necesidades esenciales de viudas y huérfanos.</p>
+                     <div class="flex items-center gap-2 text-brand-cyan text-xs font-bold uppercase"><i data-lucide="shield-check"></i> Donación Segura</div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200">
+                     <h3 class="font-bold text-navy-900 mb-4">Otros Métodos</h3>
+                     <p class="text-sm text-slate-600 mb-2"><strong>Zelle:</strong> donations@menorahtothenations.org</p>
+                     <p class="text-sm text-slate-600"><strong>Cheque:</strong> A nombre de Menorah To The Nations</p>
+                </div>
             </div>
         </div>
     </div>
@@ -251,19 +419,13 @@
     </footer>
 
     <script>
-        // Inicializar Iconos
+        // Crear Iconos
         lucide.createIcons();
 
-        // Función de Navegación Simple
+        // Navegación
         function navigateTo(pageId) {
-            // 1. Ocultar todas las secciones
             document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
-            // 2. Mostrar la seleccionada
             document.getElementById(pageId).classList.add('active');
-            
-            // 3. Actualizar menú (visual)
-            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('text-brand-cyan'));
-            // Scroll arriba
             window.scrollTo(0, 0);
         }
 
