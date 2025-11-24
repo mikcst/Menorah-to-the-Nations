@@ -1,0 +1,686 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red202\green202\blue202;\red70\green137\blue204;\red24\green24\blue24;
+\red54\green192\blue160;\red212\green212\blue212;\red194\green126\blue101;\red79\green123\blue61;\red167\green197\blue152;
+\red238\green46\blue56;}
+{\*\expandedcolortbl;;\cssrgb\c83137\c83137\c83137;\cssrgb\c33725\c61176\c83922;\cssrgb\c12157\c12157\c12157;
+\cssrgb\c23922\c78824\c69020;\cssrgb\c86275\c86275\c86275;\cssrgb\c80784\c56863\c47059;\cssrgb\c37647\c54510\c30588;\cssrgb\c70980\c80784\c65882;
+\cssrgb\c95686\c27843\c27843;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb4 \strokec3 import\cf2 \strokec2  \cf5 \cb4 \strokec5 React\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf6 \strokec6 \{\cf2 \strokec2  useState \cf6 \strokec6 \}\cf2 \strokec2  \cf3 \strokec3 from\cf2 \strokec2  \cf7 \strokec7 'react'\cf6 \strokec6 ;\cf2 \cb1 \strokec2 \
+\cf3 \cb4 \strokec3 import\cf2 \strokec2  \cf6 \strokec6 \{\cf2 \strokec2  createRoot \cf6 \strokec6 \}\cf2 \strokec2  \cf3 \strokec3 from\cf2 \strokec2  \cf7 \strokec7 'react-dom/client'\cf6 \strokec6 ;\cf2 \cb1 \strokec2 \
+\cf3 \cb4 \strokec3 import\cf2 \strokec2  \cf6 \strokec6 \{\cf2 \strokec2  \cf5 \cb4 \strokec5 Heart\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Users\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Home\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 ShieldCheck\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 ChevronRight\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Menu\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 X\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Globe\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 BookOpen\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 HandHeart\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Scale\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 ScrollText\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Star\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Send\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Handshake\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Bird\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 MapPin\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Mail\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Phone\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Copy\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Check\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Palette\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Type\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 MousePointer\cf2 \cb4 \strokec2  \cf6 \strokec6 \}\cf2 \strokec2  \cf3 \strokec3 from\cf2 \strokec2  \cf7 \strokec7 'lucide-react'\cf6 \strokec6 ;\cf2 \cb1 \strokec2 \
+\
+\cf3 \cb4 \strokec3 const\cf2 \strokec2  \cf5 \cb4 \strokec5 App\cf2 \cb4 \strokec2  \cf6 \strokec6 =\cf2 \strokec2  \cf6 \strokec6 ()\cf2 \strokec2  \cf6 \strokec6 =>\cf2 \strokec2  \cf6 \strokec6 \{\cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4   \cf3 \strokec3 const\cf2 \strokec2  \cf6 \strokec6 [\cf2 \strokec2 isMenuOpen\cf6 \strokec6 ,\cf2 \strokec2  setIsMenuOpen\cf6 \strokec6 ]\cf2 \strokec2  \cf6 \strokec6 =\cf2 \strokec2  useState\cf6 \strokec6 (\cf3 \strokec3 false\cf6 \strokec6 );\cf2 \cb1 \strokec2 \
+\
+\cb4   \cf3 \strokec3 return\cf2 \strokec2  \cf6 \strokec6 (\cf2 \cb1 \strokec2 \
+\cb4     \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cb1 \
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* Floating Button to find Style Guide */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#style-guide"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "fixed bottom-4 right-4 z-[100] bg-navy-900 text-white px-6 py-3 rounded-full shadow-2xl border-2 border-brand-cyan flex items-center gap-2 hover:scale-105 transition-transform font-bold text-xs uppercase tracking-widest cursor-pointer"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf5 \cb4 \strokec5 Palette\cf2 \cb4 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 16\cf6 \strokec6 \}\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-brand-cyan"\cf2 \strokec2  />\cb1 \
+\cb4         \cf5 \cb4 \strokec5 Ver\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Gu\cf10 \strokec10 \'ed\cf2 \cb4 \strokec2 a de \cf5 \cb4 \strokec5 Desarrollo\cf2 \cb4 \strokec2  \cf10 \cb4 \strokec10 \uc0\u55357 \u56391 \cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* Navigation */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 nav className\cf6 \strokec6 =\cf7 \strokec7 "bg-navy-900 text-white sticky top-0 z-50 shadow-xl border-b border-white/10"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex justify-between h-24 items-center"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 \{\cf8 \strokec8 /* Logo Area - AQUI PUEDES PONER TU IMAGEN */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex-shrink-0 flex items-center gap-4 cursor-pointer"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 \{\cf8 \strokec8 /* \cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb4 \strokec8                   INSTRUCCI\'d3N: Reemplaza el 'src' de abajo con la URL de tu logo.\cf2 \cb1 \strokec2 \
+\cf8 \cb4 \strokec8                   Si el logo es oscuro, aseg\'farate de usar una versi\'f3n en blanco o con fondo transparente.\cf2 \cb1 \strokec2 \
+\cf8 \cb4 \strokec8                */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4                \cf6 \strokec6 <\cf2 \strokec2 img \cb1 \
+\cb4                  src\cf6 \strokec6 =\cf7 \strokec7 "http://menorahtothenations.com/wp-content/uploads/2025/09/cropped-cropped-4.png"\cf2 \cb1 \strokec2 \
+\cb4                  alt\cf6 \strokec6 =\cf7 \strokec7 "Menorah Logo"\cf2 \strokec2  \cb1 \
+\cb4                  className\cf6 \strokec6 =\cf7 \strokec7 "h-16 w-auto object-contain"\cf2 \cb1 \strokec2 \
+\cb4                  onError\cf6 \strokec6 =\{(\cf2 \strokec2 e\cf6 \strokec6 )\cf2 \strokec2  \cf6 \strokec6 =>\cf2 \strokec2  \cf6 \strokec6 \{\cf2 \cb1 \strokec2 \
+\cb4                    \cf8 \strokec8 // Fallback si la imagen falla (para que no se vea roto)\cf2 \cb1 \strokec2 \
+\cb4                    e\cf6 \strokec6 .\cf2 \strokec2 currentTarget\cf6 \strokec6 .\cf2 \strokec2 style\cf6 \strokec6 .\cf2 \strokec2 display \cf6 \strokec6 =\cf2 \strokec2  \cf7 \strokec7 'none'\cf6 \strokec6 ;\cf2 \cb1 \strokec2 \
+\cb4                    \cf3 \strokec3 const\cf2 \strokec2  nextSibling \cf6 \strokec6 =\cf2 \strokec2  e\cf6 \strokec6 .\cf2 \strokec2 currentTarget\cf6 \strokec6 .\cf2 \strokec2 nextSibling \cf3 \strokec3 as\cf2 \strokec2  \cf5 \cb4 \strokec5 HTMLElement\cf6 \cb4 \strokec6 ;\cf2 \cb1 \strokec2 \
+\cb4                    \cf3 \strokec3 if\cf2 \strokec2  \cf6 \strokec6 (\cf2 \strokec2 nextSibling\cf6 \strokec6 )\cf2 \strokec2  \cf6 \strokec6 \{\cf2 \cb1 \strokec2 \
+\cb4                      nextSibling\cf6 \strokec6 .\cf2 \strokec2 style\cf6 \strokec6 .\cf2 \strokec2 display \cf6 \strokec6 =\cf2 \strokec2  \cf7 \strokec7 'flex'\cf6 \strokec6 ;\cf2 \cb1 \strokec2 \
+\cb4                    \cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 \}\}\cf2 \cb1 \strokec2 \
+\cb4                />\cb1 \
+\cb4                \cf6 \strokec6 \{\cf8 \strokec8 /* Fallback visual por si la imagen no carga */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "hidden relative w-12 h-12 items-center justify-center"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf2 \strokec2 svg xmlns\cf6 \strokec6 =\cf7 \strokec7 "http://www.w3.org/2000/svg"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "h-10 w-10 text-brand-cyan"\cf2 \strokec2  viewBox\cf6 \strokec6 =\cf7 \strokec7 "0 0 24 24"\cf2 \strokec2  fill\cf6 \strokec6 =\cf7 \strokec7 "none"\cf2 \strokec2  stroke\cf6 \strokec6 =\cf7 \strokec7 "currentColor"\cf2 \strokec2  strokeWidth\cf6 \strokec6 =\cf7 \strokec7 "1.5"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 path strokeLinecap\cf6 \strokec6 =\cf7 \strokec7 "round"\cf2 \strokec2  strokeLinejoin\cf6 \strokec6 =\cf7 \strokec7 "round"\cf2 \strokec2  d\cf6 \strokec6 =\cf7 \strokec7 "M12 3v18m-4-8a4 4 0 018 0M4 14a8 8 0 0116 0"\cf2 \strokec2  />\cb1 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 path strokeLinecap\cf6 \strokec6 =\cf7 \strokec7 "round"\cf2 \strokec2  strokeLinejoin\cf6 \strokec6 =\cf7 \strokec7 "round"\cf2 \strokec2  d\cf6 \strokec6 =\cf7 \strokec7 "M8 14v-2a2 2 0 014 0v2"\cf2 \strokec2  />\cb1 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 circle cx\cf6 \strokec6 =\cf7 \strokec7 "12"\cf2 \strokec2  cy\cf6 \strokec6 =\cf7 \strokec7 "3"\cf2 \strokec2  r\cf6 \strokec6 =\cf7 \strokec7 "1"\cf2 \strokec2  fill\cf6 \strokec6 =\cf7 \strokec7 "currentColor"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-gold-400"\cf2 \strokec2  />\cb1 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 circle cx\cf6 \strokec6 =\cf7 \strokec7 "8"\cf2 \strokec2  cy\cf6 \strokec6 =\cf7 \strokec7 "6"\cf2 \strokec2  r\cf6 \strokec6 =\cf7 \strokec7 "1"\cf2 \strokec2  fill\cf6 \strokec6 =\cf7 \strokec7 "currentColor"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-gold-400"\cf2 \strokec2  />\cb1 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 circle cx\cf6 \strokec6 =\cf7 \strokec7 "16"\cf2 \strokec2  cy\cf6 \strokec6 =\cf7 \strokec7 "6"\cf2 \strokec2  r\cf6 \strokec6 =\cf7 \strokec7 "1"\cf2 \strokec2  fill\cf6 \strokec6 =\cf7 \strokec7 "currentColor"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-gold-400"\cf2 \strokec2  />\cb1 \
+\cb4                  \cf6 \strokec6 </\cf2 \strokec2 svg\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4                \cf6 \strokec6 \{\cf8 \strokec8 /* Text Logo if needed next to image, hidden on mobile if image is wide */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "hidden lg:flex flex-col"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "font-serif font-bold text-xl tracking-wider text-white"\cf6 \strokec6 >\cf5 \cb4 \strokec5 MENORAH\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-xs uppercase tracking-[0.2em] text-brand-cyan"\cf6 \strokec6 >\cf5 \cb4 \strokec5 To\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 The\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Nations\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4             \cf6 \strokec6 \{\cf8 \strokec8 /* Desktop Menu */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "hidden md:flex items-center space-x-8"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#mision"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-300 hover:text-white transition-colors text-sm uppercase tracking-wide"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Nuestra\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Misi\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#ministerios"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-300 hover:text-white transition-colors text-sm uppercase tracking-wide"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Ministerios\cf6 \cb4 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#transparencia"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-300 hover:text-white transition-colors text-sm uppercase tracking-wide"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Transparencia\cf6 \cb4 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#contacto"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-300 hover:text-white transition-colors text-sm uppercase tracking-wide"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Contacto\cf6 \cb4 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 \{\cf8 \strokec8 /* CTA Button with Brand Cyan */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 button className\cf6 \strokec6 =\cf7 \strokec7 "bg-brand-cyan hover:bg-cyan-400 text-navy-900 px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest transition-all shadow-lg hover:shadow-cyan-400/50 transform hover:-translate-y-0.5 border border-cyan-300/20"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Donar\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Ahora\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4             \cf6 \strokec6 \{\cf8 \strokec8 /* Mobile menu button */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "md:hidden flex items-center"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 button onClick\cf6 \strokec6 =\{()\cf2 \strokec2  \cf6 \strokec6 =>\cf2 \strokec2  setIsMenuOpen\cf6 \strokec6 (!\cf2 \strokec2 isMenuOpen\cf6 \strokec6 )\}\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-300 hover:text-white"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 \{\cf2 \strokec2 isMenuOpen \cf6 \strokec6 ?\cf2 \strokec2  \cf6 \strokec6 <\cf5 \cb4 \strokec5 X\cf2 \cb4 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 28\cf6 \strokec6 \}\cf2 \strokec2  /> \cf6 \strokec6 :\cf2 \strokec2  \cf6 \strokec6 <\cf5 \cb4 \strokec5 Menu\cf2 \cb4 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 28\cf6 \strokec6 \}\cf2 \strokec2  />\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4         \cf6 \strokec6 \{\cf8 \strokec8 /* Mobile Menu */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 \{\cf2 \strokec2 isMenuOpen \cf6 \strokec6 &&\cf2 \strokec2  \cf6 \strokec6 (\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "md:hidden bg-navy-800 border-t border-slate-700"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "px-4 pt-2 pb-8 space-y-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#mision"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "block px-3 py-4 text-base font-medium text-white border-b border-slate-700"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Nuestra\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Misi\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#ministerios"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "block px-3 py-4 text-base font-medium text-white border-b border-slate-700"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Ministerios\cf6 \cb4 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#transparencia"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "block px-3 py-4 text-base font-medium text-white border-b border-slate-700"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Transparencia\cf6 \cb4 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 button className\cf6 \strokec6 =\cf7 \strokec7 "w-full mt-4 bg-brand-cyan text-navy-900 px-6 py-3 rounded-full font-bold uppercase tracking-widest shadow-lg"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Donar\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Ahora\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 )\}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 nav\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* Hero Section */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "relative bg-navy-900 text-white overflow-hidden"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute inset-0 z-0 opacity-40"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 \{\cf8 \strokec8 /* Abstract representational image */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 <\cf2 \strokec2 img \cb1 \
+\cb4             src\cf6 \strokec6 =\cf7 \strokec7 "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"\cf2 \strokec2  \cb1 \
+\cb4             alt\cf6 \strokec6 =\cf7 \strokec7 "Ayuda humanitaria"\cf2 \strokec2  \cb1 \
+\cb4             className\cf6 \strokec6 =\cf7 \strokec7 "w-full h-full object-cover filter grayscale sepia-[.2] contrast-125"\cf2 \cb1 \strokec2 \
+\cb4            />\cb1 \
+\cb4            \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute inset-0 bg-navy-900/80 mix-blend-multiply"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 \{\cf8 \strokec8 /* Cyan Gradient Accent for Client Brand Presence (Bottom Overlay Gradient) */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute bottom-0 right-0 w-full h-full bg-gradient-to-t from-navy-900 via-transparent to-transparent"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 \{\cf8 \strokec8 /* Top Right Glow */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute -top-40 -right-40 w-[800px] h-[800px] bg-brand-cyan/10 rounded-full blur-3xl mix-blend-screen pointer-events-none"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-48 text-center"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "inline-block mb-6 px-4 py-1 border border-brand-cyan/30 rounded-full bg-navy-900/50 backdrop-blur-sm"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-brand-cyan text-xs font-bold tracking-[0.2em] uppercase"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Registered\cf2 \cb4 \strokec2  \cf9 \strokec9 501\cf6 \strokec6 (\cf2 \strokec2 c\cf6 \strokec6 )(\cf9 \strokec9 3\cf6 \strokec6 )\cf2 \strokec2  \cf5 \cb4 \strokec5 Non\cf6 \cb4 \strokec6 -\cf5 \cb4 \strokec5 Profit\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 h1 className\cf6 \strokec6 =\cf7 \strokec7 "text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight mb-8 leading-tight"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf5 \cb4 \strokec5 Restaurando\cf2 \cb4 \strokec2  la \cf5 \cb4 \strokec5 Dignidad\cf6 \cb4 \strokec6 .\cf2 \strokec2  \cf6 \strokec6 <\cf2 \strokec2 br/>\cb1 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-brand-cyan italic drop-shadow-lg"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Preservando\cf2 \cb4 \strokec2  la \cf5 \cb4 \strokec5 Esperanza\cf6 \cb4 \strokec6 .</\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 h1\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "mt-4 max-w-2xl mx-auto text-xl text-slate-300 font-light leading-relaxed mb-10"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf5 \cb4 \strokec5 Cumpliendo\cf2 \cb4 \strokec2  el mandato b\cf10 \cb4 \strokec10 \'ed\cf2 \cb4 \strokec2 blico de cuidar a la viuda\cf6 \strokec6 ,\cf2 \strokec2  al hu\cf10 \cb4 \strokec10 \'e9\cf2 \cb4 \strokec2 rfano y al necesitado\cf6 \strokec6 .\cf2 \strokec2  \cf5 \cb4 \strokec5 Extendemos\cf2 \cb4 \strokec2  la luz de la compasi\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n desde \cf5 \cb4 \strokec5 Texas\cf2 \cb4 \strokec2  hasta las naciones\cf6 \strokec6 .\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col sm:flex-row gap-4 justify-center items-center"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 button className\cf6 \strokec6 =\cf7 \strokec7 "bg-brand-cyan hover:bg-cyan-400 text-navy-900 px-10 py-4 rounded-full font-bold uppercase text-sm tracking-widest transition-all shadow-xl hover:shadow-cyan-400/40 w-full sm:w-auto border border-cyan-400/50"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf5 \cb4 \strokec5 Extiende\cf2 \cb4 \strokec2  tu mano hoy\cb1 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 button className\cf6 \strokec6 =\cf7 \strokec7 "bg-transparent border border-white/30 hover:border-brand-cyan hover:text-brand-cyan text-white px-10 py-4 rounded-full font-bold uppercase text-sm tracking-widest transition-all w-full sm:w-auto backdrop-blur-sm"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf5 \cb4 \strokec5 Conoce\cf2 \cb4 \strokec2  nuestra labor\cb1 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* Mission Statement */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 section id\cf6 \strokec6 =\cf7 \strokec7 "mision"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "py-24 bg-white relative overflow-hidden"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 \{\cf8 \strokec8 /* Subtle Cyan Line (Border Top effect in Elementor) */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute top-0 left-0 w-full h-1 bg-brand-cyan"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cb1 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf5 \cb4 \strokec5 BookOpen\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-12 h-12 text-navy-900 mx-auto mb-6 opacity-80"\cf2 \strokec2  strokeWidth\cf6 \strokec6 =\{\cf9 \strokec9 1\cf6 \strokec6 \}\cf2 \strokec2  />\cb1 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 h2 className\cf6 \strokec6 =\cf7 \strokec7 "text-3xl font-serif font-bold text-navy-900 mb-8"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Nuestra\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Fundamentaci\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 </\cf2 \strokec2 h2\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-serif italic text-slate-600 leading-relaxed"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf7 \strokec7 "Menorah for the Nations existe para vivir el mandato de la Tor\'e1: hacer justicia, amar la misericordia y caminar humildemente, cuidando a los m\'e1s vulnerables de nuestra sociedad."\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-24 h-1 bg-brand-cyan mx-auto mt-12 rounded-full"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* The 3 Pillars */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 section id\cf6 \strokec6 =\cf7 \strokec7 "ministerios"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "py-24 bg-brand-light relative"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "text-center mb-20"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-navy-500 font-bold tracking-widest uppercase text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Nuestros\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Ministerios\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 h2 className\cf6 \strokec6 =\cf7 \strokec7 "text-4xl font-serif font-bold text-navy-900 mt-3"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Pilares\cf2 \cb4 \strokec2  de \cf5 \cb4 \strokec5 Justicia\cf2 \cb4 \strokec2  y \cf5 \cb4 \strokec5 Compasi\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 </\cf2 \strokec2 h2\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "grid md:grid-cols-3 gap-10"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 \{\cf8 \strokec8 /* Pillar 1: Widows */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-brand-cyan group relative overflow-hidden"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 bg-cyan-50 rounded-full flex items-center justify-center mb-8 group-hover:bg-brand-cyan transition-colors duration-300"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf5 \cb4 \strokec5 Heart\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8 text-navy-900 group-hover:text-white transition-colors"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-serif font-bold text-navy-900 mb-4"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Apoyo\cf2 \cb4 \strokec2  a \cf5 \cb4 \strokec5 Viudas\cf6 \cb4 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-600 leading-relaxed mb-6"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Brindamos\cf2 \cb4 \strokec2  dignidad y protecci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n a trav\cf10 \cb4 \strokec10 \'e9\cf2 \cb4 \strokec2 s de asistencia financiera para vivienda y alimentos\cf6 \strokec6 ,\cf2 \strokec2  combatiendo el aislamiento con comunidad y apoyo espiritual\cf6 \strokec6 .\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "inline-flex items-center text-navy-900 font-bold uppercase text-xs tracking-widest hover:text-brand-cyan"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Leer\cf2 \cb4 \strokec2  m\cf10 \cb4 \strokec10 \'e1\cf2 \cb4 \strokec2 s \cf6 \strokec6 <\cf5 \cb4 \strokec5 ChevronRight\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 ml-1"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4             \cf6 \strokec6 \{\cf8 \strokec8 /* Pillar 2: Orphans */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-navy-900 group"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 bg-navy-50 rounded-full flex items-center justify-center mb-8 group-hover:bg-navy-900 transition-colors duration-300"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf5 \cb4 \strokec5 Users\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8 text-navy-900 group-hover:text-brand-cyan transition-colors"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-serif font-bold text-navy-900 mb-4"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Cuidado\cf2 \cb4 \strokec2  de \cf5 \cb4 \strokec5 Hu\cf10 \strokec10 \'e9\cf2 \cb4 \strokec2 rfanos\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-600 leading-relaxed mb-6"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Construimos\cf2 \cb4 \strokec2  un futuro con prop\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 sito mediante educaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 ,\cf2 \strokec2  mentor\cf10 \cb4 \strokec10 \'ed\cf2 \cb4 \strokec2 a y cobertura de necesidades m\cf10 \cb4 \strokec10 \'e9\cf2 \cb4 \strokec2 dicas\cf6 \strokec6 ,\cf2 \strokec2  asegurando que ning\cf10 \cb4 \strokec10 \'fa\cf2 \cb4 \strokec2 n ni\cf10 \cb4 \strokec10 \'f1\cf2 \cb4 \strokec2 o crezca sin esperanza\cf6 \strokec6 .\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "inline-flex items-center text-navy-900 font-bold uppercase text-xs tracking-widest hover:text-brand-cyan"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Leer\cf2 \cb4 \strokec2  m\cf10 \cb4 \strokec10 \'e1\cf2 \cb4 \strokec2 s \cf6 \strokec6 <\cf5 \cb4 \strokec5 ChevronRight\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 ml-1"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4             \cf6 \strokec6 \{\cf8 \strokec8 /* Pillar 3: Community */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-brand-cyan group"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 bg-cyan-50 rounded-full flex items-center justify-center mb-8 group-hover:bg-brand-cyan transition-colors duration-300"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf5 \cb4 \strokec5 HandHeart\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8 text-navy-900 group-hover:text-white transition-colors"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-serif font-bold text-navy-900 mb-4"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Alcance\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Comunitario\cf6 \cb4 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-600 leading-relaxed mb-6"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Practicamos\cf2 \cb4 \strokec2  \cf6 \strokec6 <\cf2 \strokec2 em\cf6 \strokec6 >\cf5 \cb4 \strokec5 Tikkun\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Olam\cf6 \cb4 \strokec6 </\cf2 \strokec2 em\cf6 \strokec6 >\cf2 \strokec2  \cf6 \strokec6 (\cf2 \strokec2 reparaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n del mundo\cf6 \strokec6 )\cf2 \strokec2  mediante alivio a la pobreza\cf6 \strokec6 ,\cf2 \strokec2  capacitaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n de l\cf10 \cb4 \strokec10 \'ed\cf2 \cb4 \strokec2 deres y fortalecimiento de comunidades empobrecidas\cf6 \strokec6 .\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "inline-flex items-center text-navy-900 font-bold uppercase text-xs tracking-widest hover:text-brand-cyan"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Leer\cf2 \cb4 \strokec2  m\cf10 \cb4 \strokec10 \'e1\cf2 \cb4 \strokec2 s \cf6 \strokec6 <\cf5 \cb4 \strokec5 ChevronRight\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 ml-1"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* Pattern Break - Biblical Banner */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 section className\cf6 \strokec6 =\cf7 \strokec7 "bg-navy-900 py-20 relative overflow-hidden border-b border-brand-cyan/20"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 \{\cf8 \strokec8 /* Abstract Light Rays - This is the Gradient the user is asking about */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 \{\cf8 \strokec8 /* In Elementor: Use a 'Linear Gradient' background overlay, angled 120deg, from Transparent to White (5% opacity) */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 transform pointer-events-none"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute top-0 right-1/3 w-64 h-full bg-gradient-to-l from-transparent via-brand-cyan/5 to-transparent -skew-x-12 transform pointer-events-none"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cb1 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-5xl mx-auto px-4 text-center relative z-10"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf5 \cb4 \strokec5 BookOpen\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8 text-brand-cyan mx-auto mb-6 opacity-60"\cf2 \strokec2  />\cb1 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-2xl md:text-3xl font-serif italic text-white leading-relaxed mb-8"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf7 \strokec7 "Aprended a hacer el bien; buscad el juicio, restituid al agraviado, haced justicia al hu\'e9rfano, amparad a la viuda."\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-center gap-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "h-px bg-brand-cyan w-16 opacity-50"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-brand-cyan font-bold tracking-[0.25em] uppercase text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Isa\cf10 \strokec10 \'ed\cf3 \cb4 \strokec3 as\cf2 \strokec2  \cf9 \strokec9 1\cf6 \strokec6 :\cf9 \strokec9 17\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "h-px bg-brand-cyan w-16 opacity-50"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* Nuestro Impacto Section - Updated with Dotted Map Background */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 section className\cf6 \strokec6 =\cf7 \strokec7 "py-28 bg-white relative overflow-hidden"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 \{\cf8 \strokec8 /* Dotted Map Pattern Background */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute inset-0 opacity-20 pointer-events-none"\cf2 \strokec2  \cb1 \
+\cb4              style\cf6 \strokec6 =\{\{\cf2 \cb1 \strokec2 \
+\cb4                backgroundImage\cf6 \strokec6 :\cf2 \strokec2  \cf7 \strokec7 `radial-gradient(#1E293B 1.5px, transparent 1.5px)`\cf6 \strokec6 ,\cf2 \cb1 \strokec2 \
+\cb4                backgroundSize\cf6 \strokec6 :\cf2 \strokec2  \cf7 \strokec7 '24px 24px'\cf6 \strokec6 ,\cf2 \cb1 \strokec2 \
+\cb4                maskImage\cf6 \strokec6 :\cf2 \strokec2  \cf7 \strokec7 'radial-gradient(circle at center, black 40%, transparent 100%)'\cf2 \cb1 \strokec2 \
+\cb4              \cf6 \strokec6 \}\}>\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cb1 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "text-center mb-16"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-brand-cyan font-bold tracking-widest uppercase text-xs mb-2 block"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Alcance\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Global\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 h2 className\cf6 \strokec6 =\cf7 \strokec7 "text-4xl font-serif font-bold text-navy-900"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Nuestro\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Impacto\cf6 \cb4 \strokec6 </\cf2 \strokec2 h2\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 \{\cf8 \strokec8 /* Card 1: Misi\'f3n */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "p-8 rounded-xl bg-white border border-slate-100 shadow-lg hover:shadow-2xl hover:shadow-brand-cyan/10 transition-all duration-300 text-center group transform hover:-translate-y-1"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-cyan group-hover:text-navy-900 transition-all text-navy-900"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf5 \cb4 \strokec5 Star\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-xl font-bold text-navy-900 mb-2 font-serif"\cf6 \strokec6 >\cf9 \strokec9 1\cf2 \strokec2  \cf5 \cb4 \strokec5 Misi\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-500 text-sm leading-relaxed"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Con\cf2 \cb4 \strokec2  hu\cf10 \cb4 \strokec10 \'e9\cf2 \cb4 \strokec2 rfanos\cf6 \strokec6 ,\cf2 \strokec2  viudas y comunidades\cf6 \strokec6 .</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4              \cf6 \strokec6 \{\cf8 \strokec8 /* Card 2: Viajes */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "p-8 rounded-xl bg-white border border-slate-100 shadow-lg hover:shadow-2xl hover:shadow-brand-cyan/10 transition-all duration-300 text-center group transform hover:-translate-y-1"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-cyan group-hover:text-navy-900 transition-all text-navy-900"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf5 \cb4 \strokec5 Send\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-xl font-bold text-navy-900 mb-2 font-serif"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Primeros\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Viajes\cf6 \cb4 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-500 text-sm leading-relaxed"\cf6 \strokec6 >\cf5 \cb4 \strokec5 En\cf2 \cb4 \strokec2  preparaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n para el impacto \cf3 \strokec3 global\cf6 \strokec6 .</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4              \cf6 \strokec6 \{\cf8 \strokec8 /* Card 3: Non-Profit */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "p-8 rounded-xl bg-white border border-slate-100 shadow-lg hover:shadow-2xl hover:shadow-brand-cyan/10 transition-all duration-300 text-center group transform hover:-translate-y-1"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-cyan group-hover:text-navy-900 transition-all text-navy-900"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf5 \cb4 \strokec5 Handshake\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-xl font-bold text-navy-900 mb-2 font-serif"\cf6 \strokec6 >\cf9 \strokec9 100\cf6 \strokec6 %\cf2 \strokec2  \cf5 \cb4 \strokec5 Sin\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Fines\cf2 \cb4 \strokec2  de \cf5 \cb4 \strokec5 Lucro\cf6 \cb4 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-500 text-sm leading-relaxed"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Gesti\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n transparente y verificada\cf6 \strokec6 .</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4              \cf6 \strokec6 \{\cf8 \strokec8 /* Card 4: Solidaridad */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "p-8 rounded-xl bg-white border border-slate-100 shadow-lg hover:shadow-2xl hover:shadow-brand-cyan/10 transition-all duration-300 text-center group transform hover:-translate-y-1"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-cyan group-hover:text-navy-900 transition-all text-navy-900"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf5 \cb4 \strokec5 Bird\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8"\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-xl font-bold text-navy-900 mb-2 font-serif"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Compromiso\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Solidario\cf6 \cb4 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-500 text-sm leading-relaxed"\cf6 \strokec6 >\cf9 \strokec9 6\cf2 \strokec2  \cf5 \cb4 \strokec5 Proyectos\cf2 \cb4 \strokec2  en desarrollo activo\cf6 \strokec6 .</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* Transparency Section */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 section id\cf6 \strokec6 =\cf7 \strokec7 "transparencia"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "py-24 bg-navy-900 text-white relative overflow-hidden"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 \{\cf8 \strokec8 /* Background Pattern */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brand-cyan/20 rounded-full blur-3xl"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "grid lg:grid-cols-2 gap-16 items-center"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3 mb-6"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf5 \cb4 \strokec5 ShieldCheck\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8 text-brand-cyan"\cf2 \strokec2  />\cb1 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-brand-cyan font-bold tracking-widest uppercase text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Integridad\cf2 \cb4 \strokec2  y \cf5 \cb4 \strokec5 Confianza\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h2 className\cf6 \strokec6 =\cf7 \strokec7 "text-4xl font-serif font-bold mb-6"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Mayordom\cf10 \strokec10 \'ed\cf2 \cb4 \strokec2 a \cf5 \cb4 \strokec5 Transparente\cf6 \cb4 \strokec6 </\cf2 \strokec2 h2\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-300 mb-6 leading-relaxed text-lg font-light"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Operamos\cf2 \cb4 \strokec2  bajo la estricta supervisi\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n de nuestra \cf5 \cb4 \strokec5 Junta\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Directiva\cf2 \cb4 \strokec2  y en cumplimiento total con las regulaciones \cf9 \strokec9 501\cf6 \strokec6 (\cf2 \strokec2 c\cf6 \strokec6 )(\cf9 \strokec9 3\cf6 \strokec6 )\cf2 \strokec2  del \cf5 \cb4 \strokec5 IRS\cf6 \cb4 \strokec6 .\cf2 \strokec2  \cf5 \cb4 \strokec5 Cada\cf2 \cb4 \strokec2  donaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n es tratada sagradamente\cf6 \strokec6 .\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cb1 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 ul className\cf6 \strokec6 =\cf7 \strokec7 "space-y-4 mb-10"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li className\cf6 \strokec6 =\cf7 \strokec7 "flex items-start gap-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-6 h-6 rounded-full bg-brand-cyan/20 flex items-center justify-center mt-1 text-brand-cyan"\cf6 \strokec6 >\cf10 \cb4 \strokec10 \uc0\u10003 \cf6 \cb4 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 strong className\cf6 \strokec6 =\cf7 \strokec7 "block text-white font-serif"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Supervisi\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n de la \cf5 \cb4 \strokec5 Junta\cf6 \cb4 \strokec6 </\cf2 \strokec2 strong\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-400 text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Decisiones\cf2 \cb4 \strokec2  financieras aprobadas por voto mayoritario\cf6 \strokec6 .</\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 </\cf2 \strokec2 li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li className\cf6 \strokec6 =\cf7 \strokec7 "flex items-start gap-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-6 h-6 rounded-full bg-brand-cyan/20 flex items-center justify-center mt-1 text-brand-cyan"\cf6 \strokec6 >\cf10 \cb4 \strokec10 \uc0\u10003 \cf6 \cb4 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 strong className\cf6 \strokec6 =\cf7 \strokec7 "block text-white font-serif"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Cumplimiento\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 IRS\cf2 \cb4 \strokec2  \cf6 \strokec6 &\cf2 \strokec2  \cf5 \cb4 \strokec5 OFAC\cf6 \cb4 \strokec6 </\cf2 \strokec2 strong\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-400 text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Verificaci\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n rigurosa de beneficiarios internacionales\cf6 \strokec6 .</\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 </\cf2 \strokec2 li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li className\cf6 \strokec6 =\cf7 \strokec7 "flex items-start gap-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-6 h-6 rounded-full bg-brand-cyan/20 flex items-center justify-center mt-1 text-brand-cyan"\cf6 \strokec6 >\cf10 \cb4 \strokec10 \uc0\u10003 \cf6 \cb4 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 strong className\cf6 \strokec6 =\cf7 \strokec7 "block text-white font-serif"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Informes\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Detallados\cf6 \cb4 \strokec6 </\cf2 \strokec2 strong\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-400 text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Documentaci\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n y recibos de cada distribuci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n de fondos\cf6 \strokec6 .</\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 </\cf2 \strokec2 li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 ul\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 button className\cf6 \strokec6 =\cf7 \strokec7 "text-white border-b border-brand-cyan pb-1 hover:text-brand-cyan transition-colors text-sm uppercase tracking-widest"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Ver\cf2 \cb4 \strokec2  nuestra documentaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n financiera\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cb1 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "relative"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 \{\cf8 \strokec8 /* Visual representation of documentation/legal solidity */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl relative"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute -top-6 -right-6 bg-brand-cyan text-navy-900 w-24 h-24 rounded-full flex flex-col items-center justify-center font-bold shadow-xl z-20 shadow-cyan-500/20"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-2xl"\cf6 \strokec6 >\cf9 \strokec9 100\cf2 \strokec2 %</span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-[10px] uppercase tracking-wider"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Non\cf6 \cb4 \strokec6 -\cf5 \cb4 \strokec5 Profit\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cb1 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "space-y-6 opacity-90"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between border-b border-white/10 pb-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "font-serif text-lg"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Estatus\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Legal\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs font-bold uppercase"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Activo\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between border-b border-white/10 pb-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "font-serif text-lg"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Tipo\cf2 \cb4 \strokec2  de \cf5 \cb4 \strokec5 Organizaci\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-300 text-sm"\cf6 \strokec6 >\cf9 \strokec9 501\cf6 \strokec6 (\cf2 \strokec2 c\cf6 \strokec6 )(\cf9 \strokec9 3\cf6 \strokec6 )\cf2 \strokec2  \cf5 \cb4 \strokec5 Public\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Charity\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between border-b border-white/10 pb-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "font-serif text-lg"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Sede\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-300 text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Texas\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 USA\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between pb-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "font-serif text-lg"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Enfoque\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-300 text-sm text-right"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Religioso\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 Educativo\cf6 \cb4 \strokec6 ,<\cf2 \strokec2 br/>\cf5 \cb4 \strokec5 Caritativo\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* CONTACT SECTION (Visual Placeholder for Elementor Pro Form) */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 section id\cf6 \strokec6 =\cf7 \strokec7 "contacto"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "py-24 bg-brand-light relative"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4          \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "grid lg:grid-cols-2 gap-16"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 \{\cf8 \strokec8 /* Left: Contact Information */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "text-navy-500 font-bold tracking-widest uppercase text-sm mb-3 block"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Comun\cf10 \strokec10 \'ed\cf2 \cb4 \strokec2 cate\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 h2 className\cf6 \strokec6 =\cf7 \strokec7 "text-4xl font-serif font-bold text-navy-900 mb-6"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Estamos\cf2 \cb4 \strokec2  aqu\cf10 \cb4 \strokec10 \'ed\cf2 \cb4 \strokec2  para servir\cf6 \strokec6 </\cf2 \strokec2 h2\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-600 mb-10 leading-relaxed"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf5 \cb4 \strokec5 Ya\cf2 \cb4 \strokec2  sea que desees ser voluntario\cf6 \strokec6 ,\cf2 \strokec2  necesites m\cf10 \cb4 \strokec10 \'e1\cf2 \cb4 \strokec2 s informaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n sobre nuestros programas\cf6 \strokec6 ,\cf2 \strokec2  o seas un l\cf10 \cb4 \strokec10 \'ed\cf2 \cb4 \strokec2 der comunitario buscando alianzas\cf6 \strokec6 ,\cf2 \strokec2  queremos escucharte\cf6 \strokec6 .\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "space-y-6"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-start gap-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-white p-3 rounded-full shadow-sm text-brand-cyan"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf5 \cb4 \strokec5 MapPin\cf2 \cb4 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 24\cf6 \strokec6 \}\cf2 \strokec2  />\cb1 \
+\cb4                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 h4 className\cf6 \strokec6 =\cf7 \strokec7 "font-serif font-bold text-navy-900"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Ubicaci\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-600 text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Texas\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 United\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 States\cf6 \cb4 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-start gap-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-white p-3 rounded-full shadow-sm text-brand-cyan"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf5 \cb4 \strokec5 Mail\cf2 \cb4 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 24\cf6 \strokec6 \}\cf2 \strokec2  />\cb1 \
+\cb4                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 h4 className\cf6 \strokec6 =\cf7 \strokec7 "font-serif font-bold text-navy-900"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Email\cf6 \cb4 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-600 text-sm"\cf6 \strokec6 >\cf2 \strokec2 info\cf10 \cb4 \strokec10 @\cf2 \cb4 \strokec2 menorahtothenations\cf6 \strokec6 .\cf2 \strokec2 org\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-start gap-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-white p-3 rounded-full shadow-sm text-brand-cyan"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf5 \cb4 \strokec5 Phone\cf2 \cb4 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 24\cf6 \strokec6 \}\cf2 \strokec2  />\cb1 \
+\cb4                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 h4 className\cf6 \strokec6 =\cf7 \strokec7 "font-serif font-bold text-navy-900"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Horario\cf6 \cb4 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-600 text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Lunes\cf2 \cb4 \strokec2  \cf6 \strokec6 -\cf2 \strokec2  \cf5 \cb4 \strokec5 Viernes\cf6 \cb4 \strokec6 :\cf2 \strokec2  \cf9 \strokec9 9\cf6 \strokec6 :\cf9 \strokec9 00\cf2 \strokec2  \cf5 \cb4 \strokec5 AM\cf2 \cb4 \strokec2  \cf6 \strokec6 -\cf2 \strokec2  \cf9 \strokec9 5\cf6 \strokec6 :\cf9 \strokec9 00\cf2 \strokec2  \cf5 \cb4 \strokec5 PM\cf6 \cb4 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4                \cf6 \strokec6 \{\cf8 \strokec8 /* Right: Form Container (Elementor Pro Style) */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-white p-8 md:p-10 rounded-2xl shadow-xl border-t-4 border-brand-cyan"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-serif font-bold text-navy-900 mb-6"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Env\cf10 \strokec10 \'ed\cf2 \cb4 \strokec2 anos un mensaje\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 form className\cf6 \strokec6 =\cf7 \strokec7 "space-y-5"\cf2 \strokec2  onSubmit\cf6 \strokec6 =\{(\cf2 \strokec2 e\cf6 \strokec6 )\cf2 \strokec2  \cf6 \strokec6 =>\cf2 \strokec2  e\cf6 \strokec6 .\cf2 \strokec2 preventDefault\cf6 \strokec6 ()\}>\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "grid md:grid-cols-2 gap-5"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "space-y-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 label className\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-bold text-navy-800 ml-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Nombre\cf6 \cb4 \strokec6 </\cf2 \strokec2 label\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 input \cb1 \
+\cb4                               \cf3 \strokec3 type\cf6 \strokec6 =\cf7 \strokec7 "text"\cf2 \strokec2  \cb1 \
+\cb4                               className\cf6 \strokec6 =\cf7 \strokec7 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all"\cf2 \cb1 \strokec2 \
+\cb4                               placeholder\cf6 \strokec6 =\cf7 \strokec7 "Nombre"\cf2 \cb1 \strokec2 \
+\cb4                            />\cb1 \
+\cb4                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "space-y-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 label className\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-bold text-navy-800 ml-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Apellido\cf6 \cb4 \strokec6 </\cf2 \strokec2 label\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 input \cb1 \
+\cb4                               \cf3 \strokec3 type\cf6 \strokec6 =\cf7 \strokec7 "text"\cf2 \strokec2  \cb1 \
+\cb4                               className\cf6 \strokec6 =\cf7 \strokec7 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all"\cf2 \cb1 \strokec2 \
+\cb4                               placeholder\cf6 \strokec6 =\cf7 \strokec7 "Apellidos"\cf2 \cb1 \strokec2 \
+\cb4                            />\cb1 \
+\cb4                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "space-y-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 label className\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-bold text-navy-800 ml-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Email\cf6 \cb4 \strokec6 </\cf2 \strokec2 label\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 input \cb1 \
+\cb4                            \cf3 \strokec3 type\cf6 \strokec6 =\cf7 \strokec7 "email"\cf2 \strokec2  \cb1 \
+\cb4                            className\cf6 \strokec6 =\cf7 \strokec7 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all"\cf2 \cb1 \strokec2 \
+\cb4                            placeholder\cf6 \strokec6 =\cf7 \strokec7 "ejemplo@email.com"\cf2 \cb1 \strokec2 \
+\cb4                         />\cb1 \
+\cb4                      \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cb1 \
+\cb4                      \cf6 \strokec6 \{\cf8 \strokec8 /* Elementor Pro Select Field Example */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "space-y-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 label className\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-bold text-navy-800 ml-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Motivo\cf2 \cb4 \strokec2  de \cf5 \cb4 \strokec5 Contacto\cf6 \cb4 \strokec6 </\cf2 \strokec2 label\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 select className\cf6 \strokec6 =\cf7 \strokec7 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all text-slate-600"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 option\cf6 \strokec6 >\cf5 \cb4 \strokec5 Quiero\cf2 \cb4 \strokec2  hacer una donaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 </\cf2 \strokec2 option\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 option\cf6 \strokec6 >\cf5 \cb4 \strokec5 Inter\cf10 \strokec10 \'e9\cf2 \cb4 \strokec2 s en voluntariado\cf6 \strokec6 </\cf2 \strokec2 option\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 option\cf6 \strokec6 >\cf5 \cb4 \strokec5 Informaci\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n general\cf6 \strokec6 </\cf2 \strokec2 option\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 option\cf6 \strokec6 >\cf5 \cb4 \strokec5 Alianzas\cf2 \cb4 \strokec2  \cf6 \strokec6 /\cf2 \strokec2  \cf5 \cb4 \strokec5 Iglesias\cf6 \cb4 \strokec6 </\cf2 \strokec2 option\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 </\cf2 \strokec2 select\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "space-y-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 label className\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-bold text-navy-800 ml-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Mensaje\cf6 \cb4 \strokec6 </\cf2 \strokec2 label\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf6 \strokec6 <\cf2 \strokec2 textarea \cb1 \
+\cb4                            rows\cf6 \strokec6 =\{\cf9 \strokec9 4\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                            className\cf6 \strokec6 =\cf7 \strokec7 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all resize-none"\cf2 \cb1 \strokec2 \
+\cb4                            placeholder\cf6 \strokec6 =\cf7 \strokec7 "\'bfEn qu\'e9 podemos ayudarte?"\cf2 \cb1 \strokec2 \
+\cb4                         ></textarea\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cb1 \
+\cb4                      \cf6 \strokec6 \{\cf8 \strokec8 /* Button matched to Brand Cyan */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 button className\cf6 \strokec6 =\cf7 \strokec7 "w-full bg-brand-cyan text-navy-900 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-cyan-400 transition-colors shadow-lg mt-4 transform hover:-translate-y-0.5"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                         \cf5 \cb4 \strokec5 Enviar\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Mensaje\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 form\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4          \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* CTA Footer Section (Modified to focus only on Action) */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 section className\cf6 \strokec6 =\cf7 \strokec7 "py-20 bg-white border-t border-slate-100"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4          \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-5xl mx-auto px-4 text-center"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 h2 className\cf6 \strokec6 =\cf7 \strokec7 "text-4xl font-serif font-bold text-navy-900 mb-6"\cf6 \strokec6 >\cf5 \cb4 \strokec5 S\cf10 \strokec10 \'e9\cf2 \cb4 \strokec2  parte de la restauraci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cf6 \strokec6 </\cf2 \strokec2 h2\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-xl text-slate-600 mb-10 max-w-2xl mx-auto"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf5 \cb4 \strokec5 Tu\cf2 \cb4 \strokec2  contribuci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n hoy se convierte en alimento\cf6 \strokec6 ,\cf2 \strokec2  educaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n y esperanza para alguien que lo necesita desesperadamente\cf6 \strokec6 .\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col md:flex-row justify-center gap-6"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 <\cf2 \strokec2 button className\cf6 \strokec6 =\cf7 \strokec7 "bg-brand-cyan hover:bg-cyan-400 text-navy-900 px-12 py-5 rounded-full font-bold uppercase text-sm tracking-widest shadow-xl hover:shadow-cyan-400/50 transition-all transform hover:-translate-y-1 border border-cyan-300/20"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf5 \cb4 \strokec5 Hacer\cf2 \cb4 \strokec2  una \cf5 \cb4 \strokec5 Donaci\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n\cb1 \
+\cb4                \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4          \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* Footer */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 footer className\cf6 \strokec6 =\cf7 \strokec7 "bg-navy-900 text-slate-400 py-12 border-t border-white/5"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "grid md:grid-cols-4 gap-8 mb-12"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "col-span-1 md:col-span-1"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 \{\cf8 \strokec8 /* Footer Logo */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-2 mb-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-8 h-8 text-brand-cyan"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                    \cf6 \strokec6 <\cf2 \strokec2 svg xmlns\cf6 \strokec6 =\cf7 \strokec7 "http://www.w3.org/2000/svg"\cf2 \strokec2  viewBox\cf6 \strokec6 =\cf7 \strokec7 "0 0 24 24"\cf2 \strokec2  fill\cf6 \strokec6 =\cf7 \strokec7 "none"\cf2 \strokec2  stroke\cf6 \strokec6 =\cf7 \strokec7 "currentColor"\cf2 \strokec2  strokeWidth\cf6 \strokec6 =\cf7 \strokec7 "2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 path strokeLinecap\cf6 \strokec6 =\cf7 \strokec7 "round"\cf2 \strokec2  strokeLinejoin\cf6 \strokec6 =\cf7 \strokec7 "round"\cf2 \strokec2  d\cf6 \strokec6 =\cf7 \strokec7 "M12 3v18m-4-8a4 4 0 018 0M4 14a8 8 0 0116 0"\cf2 \strokec2  />\cb1 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 path strokeLinecap\cf6 \strokec6 =\cf7 \strokec7 "round"\cf2 \strokec2  strokeLinejoin\cf6 \strokec6 =\cf7 \strokec7 "round"\cf2 \strokec2  d\cf6 \strokec6 =\cf7 \strokec7 "M8 14v-2a2 2 0 014 0v2"\cf2 \strokec2  />\cb1 \
+\cb4                    \cf6 \strokec6 </\cf2 \strokec2 svg\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "font-serif font-bold text-xl text-white"\cf6 \strokec6 >\cf5 \cb4 \strokec5 MENORAH\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-sm leading-relaxed mb-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf5 \cb4 \strokec5 Una\cf2 \cb4 \strokec2  corporaci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n sin fines de lucro de \cf5 \cb4 \strokec5 Texas\cf2 \cb4 \strokec2  organizada exclusivamente para fines caritativos\cf6 \strokec6 ,\cf2 \strokec2  religiosos y educativos\cf6 \strokec6 .\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cb1 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h4 className\cf6 \strokec6 =\cf7 \strokec7 "text-white font-bold uppercase text-xs tracking-widest mb-6"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Enlaces\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 R\cf10 \strokec10 \'e1\cf2 \cb4 \strokec2 pidos\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 ul className\cf6 \strokec6 =\cf7 \strokec7 "space-y-3 text-sm"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li><a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "hover:text-brand-cyan transition-colors"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Sobre\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Nosotros\cf6 \cb4 \strokec6 </\cf2 \strokec2 a></li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li><a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "hover:text-brand-cyan transition-colors"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Nuestros\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Ministerios\cf6 \cb4 \strokec6 </\cf2 \strokec2 a></li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li><a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "hover:text-brand-cyan transition-colors"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Declaraci\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n de \cf5 \cb4 \strokec5 Fe\cf6 \cb4 \strokec6 </\cf2 \strokec2 a></li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li><a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "hover:text-brand-cyan transition-colors"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Contacto\cf6 \cb4 \strokec6 </\cf2 \strokec2 a></li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 ul\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h4 className\cf6 \strokec6 =\cf7 \strokec7 "text-white font-bold uppercase text-xs tracking-widest mb-6"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Contacto\cf6 \cb4 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 ul className\cf6 \strokec6 =\cf7 \strokec7 "space-y-3 text-sm"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li\cf6 \strokec6 >\cf2 \strokec2 info\cf10 \cb4 \strokec10 @\cf2 \cb4 \strokec2 menorahtothenations\cf6 \strokec6 .\cf2 \strokec2 org\cf6 \strokec6 </\cf2 \strokec2 li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li\cf6 \strokec6 >\cf5 \cb4 \strokec5 Texas\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 United\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 States\cf6 \cb4 \strokec6 </\cf2 \strokec2 li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 ul\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 h4 className\cf6 \strokec6 =\cf7 \strokec7 "text-white font-bold uppercase text-xs tracking-widest mb-6"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Legal\cf6 \cb4 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 ul className\cf6 \strokec6 =\cf7 \strokec7 "space-y-3 text-sm"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li><a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "hover:text-brand-cyan transition-colors"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Pol\cf10 \strokec10 \'ed\cf2 \cb4 \strokec2 tica de \cf5 \cb4 \strokec5 Privacidad\cf6 \cb4 \strokec6 </\cf2 \strokec2 a></li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li><a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "hover:text-brand-cyan transition-colors"\cf6 \strokec6 >\cf5 \cb4 \strokec5 T\cf10 \strokec10 \'e9\cf2 \cb4 \strokec2 rminos de \cf5 \cb4 \strokec5 Uso\cf6 \cb4 \strokec6 </\cf2 \strokec2 a></li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                 \cf6 \strokec6 <\cf2 \strokec2 li><a href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "hover:text-brand-cyan transition-colors"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Transparencia\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Financiera\cf6 \cb4 \strokec6 </\cf2 \strokec2 a></li\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 ul\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cb1 \
+\cb4           \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 p>&copy\cf6 \strokec6 ;\cf2 \strokec2  \cf6 \strokec6 \{\cf3 \strokec3 new\cf2 \strokec2  \cf5 \cb4 \strokec5 Date\cf6 \cb4 \strokec6 ().\cf2 \strokec2 getFullYear\cf6 \strokec6 ()\}\cf2 \strokec2  \cf5 \cb4 \strokec5 Menorah\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 To\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 The\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Nations\cf6 \cb4 \strokec6 .\cf2 \strokec2  \cf5 \cb4 \strokec5 Todos\cf2 \cb4 \strokec2  los derechos reservados\cf6 \strokec6 .</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "w-2 h-2 rounded-full bg-green-500"\cf2 \strokec2 ></span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb4 \strokec5 IRS\cf2 \cb4 \strokec2  \cf9 \strokec9 501\cf6 \strokec6 (\cf2 \strokec2 c\cf6 \strokec6 )(\cf9 \strokec9 3\cf6 \strokec6 )\cf2 \strokec2  \cf5 \cb4 \strokec5 Compliant\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Organization\cf6 \cb4 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4           \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 footer\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4       \cf6 \strokec6 \{\cf8 \strokec8 /* DEVELOPER STYLE GUIDE SECTION */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 <\cf2 \strokec2 section id\cf6 \strokec6 =\cf7 \strokec7 "style-guide"\cf2 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "bg-slate-800 py-20 border-t-8 border-brand-cyan"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "max-w-5xl mx-auto px-6 bg-white shadow-2xl rounded-xl p-10 overflow-hidden relative"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-navy-900 via-brand-cyan to-navy-900"\cf2 \strokec2 ></div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4            \cb1 \
+\cb4            \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3 mb-8 border-b border-slate-200 pb-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-navy-900 text-white p-2 rounded"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf5 \cb4 \strokec5 Copy\cf2 \cb4 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 24\cf6 \strokec6 \}\cf2 \strokec2  />\cb1 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf2 \strokec2 h2 className\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold text-navy-900 m-0"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Gu\cf10 \strokec10 \'ed\cf2 \cb4 \strokec2 a de \cf5 \cb4 \strokec5 Desarrollo\cf2 \cb4 \strokec2  \cf6 \strokec6 (\cf5 \cb4 \strokec5 Style\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Guide\cf6 \cb4 \strokec6 )</\cf2 \strokec2 h2\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-500 text-sm"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Copia\cf2 \cb4 \strokec2  estos valores en la configuraci\cf10 \cb4 \strokec10 \'f3\cf2 \cb4 \strokec2 n de \cf6 \strokec6 <\cf2 \strokec2 strong\cf6 \strokec6 >\cf5 \cb4 \strokec5 Colores\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Globales\cf6 \cb4 \strokec6 </\cf2 \strokec2 strong\cf6 \strokec6 >\cf2 \strokec2  de \cf5 \cb4 \strokec5 Elementor\cf6 \cb4 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4            \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "grid md:grid-cols-2 gap-12"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 \{\cf8 \strokec8 /* Colors */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-2 mb-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf5 \cb4 \strokec5 Palette\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-brand-cyan"\cf2 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 20\cf6 \strokec6 \}\cf2 \strokec2  />\cb1 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-lg font-bold text-navy-900 uppercase tracking-wider text-sm"\cf6 \strokec6 >\cf9 \strokec9 1\cf6 \strokec6 .\cf2 \strokec2  \cf5 \cb4 \strokec5 Colores\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Globales\cf2 \cb4 \strokec2  \cf6 \strokec6 (\cf5 \cb4 \strokec5 Elementor\cf6 \cb4 \strokec6 )</\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cb1 \
+\cb4                  \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "space-y-3"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 \{\cf8 \strokec8 /* Primary */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-4 group cursor-pointer hover:bg-slate-50 p-2 rounded transition-colors"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 rounded-lg bg-navy-900 shadow-md border border-slate-200 flex items-center justify-center text-white text-xs font-bold"\cf6 \strokec6 >\cf9 \strokec9 1\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-navy-900"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Principal\cf2 \cb4 \strokec2  \cf6 \strokec6 (\cf5 \cb4 \strokec5 Primary\cf6 \cb4 \strokec6 )</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 code className\cf6 \strokec6 =\cf7 \strokec7 "bg-slate-100 px-2 py-1 rounded text-sm text-slate-600 border border-slate-300"\cf6 \strokec6 >\cf10 \cb4 \strokec10 #\cf9 \cb4 \strokec9 0\cf5 \cb4 \strokec5 F172A\cf6 \cb4 \strokec6 </\cf2 \strokec2 code\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-slate-500 mt-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Para\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 T\cf10 \strokec10 \'ed\cf2 \cb4 \strokec2 tulos \cf6 \strokec6 (\cf5 \cb4 \strokec5 H1\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 H2\cf6 \cb4 \strokec6 )</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4                     \cf6 \strokec6 \{\cf8 \strokec8 /* Secondary */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-4 group cursor-pointer hover:bg-slate-50 p-2 rounded transition-colors"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 rounded-lg bg-slate-700 shadow-md border border-slate-200 flex items-center justify-center text-white text-xs font-bold"\cf6 \strokec6 >\cf9 \strokec9 2\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-navy-900"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Secundario\cf2 \cb4 \strokec2  \cf6 \strokec6 (\cf5 \cb4 \strokec5 Secondary\cf6 \cb4 \strokec6 )</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 code className\cf6 \strokec6 =\cf7 \strokec7 "bg-slate-100 px-2 py-1 rounded text-sm text-slate-600 border border-slate-300"\cf6 \strokec6 >\cf10 \cb4 \strokec10 #\cf9 \cb4 \strokec9 334155\cf6 \strokec6 </\cf2 \strokec2 code\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-slate-500 mt-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Para\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Subt\cf10 \strokec10 \'ed\cf2 \cb4 \strokec2 tulos\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4                     \cf6 \strokec6 \{\cf8 \strokec8 /* Text */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-4 group cursor-pointer hover:bg-slate-50 p-2 rounded transition-colors"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 rounded-lg bg-slate-600 shadow-md border border-slate-200 flex items-center justify-center text-white text-xs font-bold"\cf6 \strokec6 >\cf9 \strokec9 3\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-navy-900"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Texto\cf2 \cb4 \strokec2  \cf6 \strokec6 (\cf5 \cb4 \strokec5 Text\cf6 \cb4 \strokec6 )</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 code className\cf6 \strokec6 =\cf7 \strokec7 "bg-slate-100 px-2 py-1 rounded text-sm text-slate-600 border border-slate-300"\cf6 \strokec6 >\cf10 \cb4 \strokec10 #\cf9 \cb4 \strokec9 475569\cf6 \strokec6 </\cf2 \strokec2 code\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-slate-500 mt-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Para\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 P\cf10 \strokec10 \'e1\cf2 \cb4 \strokec2 rrafos\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4                     \cf6 \strokec6 \{\cf8 \strokec8 /* Accent */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-4 group cursor-pointer hover:bg-slate-50 p-2 rounded transition-colors"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 rounded-lg bg-brand-cyan shadow-md border border-slate-200 flex items-center justify-center text-navy-900 text-xs font-bold"\cf6 \strokec6 >\cf9 \strokec9 4\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-navy-900"\cf6 \strokec6 >\cf10 \cb4 \strokec10 \'c9\cf2 \cb4 \strokec2 nfasis \cf6 \strokec6 (\cf5 \cb4 \strokec5 Accent\cf6 \cb4 \strokec6 )</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 code className\cf6 \strokec6 =\cf7 \strokec7 "bg-slate-100 px-2 py-1 rounded text-sm text-slate-600 border border-slate-300"\cf6 \strokec6 >\cf10 \cb4 \strokec10 #\cf9 \cb4 \strokec9 5\cf5 \cb4 \strokec5 CE1E6\cf6 \cb4 \strokec6 </\cf2 \strokec2 code\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-slate-500 mt-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Para\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Botones\cf2 \cb4 \strokec2  y \cf5 \cb4 \strokec5 Enlaces\cf6 \cb4 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4                     \cf6 \strokec6 \{\cf8 \strokec8 /* Custom */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-4 group cursor-pointer hover:bg-slate-50 p-2 rounded transition-colors mt-6 pt-4 border-t border-slate-100"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 rounded-lg bg-brand-light shadow-md border border-slate-200 flex items-center justify-center text-navy-900 text-xs font-bold"\cf2 \strokec2 >+</div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-navy-900"\cf6 \strokec6 >\cf5 \cb4 \strokec5 A\cf10 \strokec10 \'f1\cf2 \cb4 \strokec2 adir \cf5 \cb4 \strokec5 Color\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Personalizado\cf6 \cb4 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 code className\cf6 \strokec6 =\cf7 \strokec7 "bg-slate-100 px-2 py-1 rounded text-sm text-slate-600 border border-slate-300"\cf6 \strokec6 >\cf10 \cb4 \strokec10 #\cf5 \strokec5 E0F9FA\cf6 \cb4 \strokec6 </\cf2 \strokec2 code\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-slate-500 mt-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Nombre\cf6 \cb4 \strokec6 :\cf2 \strokec2  \cf7 \strokec7 "Fondo Suave"\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4               \cf6 \strokec6 \{\cf8 \strokec8 /* Typography */\cf6 \strokec6 \}\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-2 mb-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf5 \cb4 \strokec5 Type\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-brand-cyan"\cf2 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 20\cf6 \strokec6 \}\cf2 \strokec2  />\cb1 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-lg font-bold text-navy-900 uppercase tracking-wider text-sm"\cf6 \strokec6 >\cf9 \strokec9 2\cf6 \strokec6 .\cf2 \strokec2  \cf5 \cb4 \strokec5 Tipograf\cf10 \strokec10 \'ed\cf2 \cb4 \strokec2 a \cf5 \cb4 \strokec5 Global\cf6 \cb4 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cb1 \
+\cb4                  \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "space-y-6"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "p-4 border border-slate-200 rounded-lg"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-500 text-xs uppercase mb-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Encabezados\cf2 \cb4 \strokec2  \cf6 \strokec6 (\cf5 \cb4 \strokec5 H1\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 H2\cf6 \cb4 \strokec6 ,\cf2 \strokec2  \cf5 \cb4 \strokec5 H3\cf6 \cb4 \strokec6 )</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-3xl font-serif font-bold text-navy-900 mb-2"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Playfair\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Display\cf6 \cb4 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex gap-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 code className\cf6 \strokec6 =\cf7 \strokec7 "text-xs bg-slate-100 p-1 rounded border border-slate-300"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Weight\cf6 \cb4 \strokec6 :\cf2 \strokec2  \cf9 \strokec9 700\cf2 \strokec2  \cf6 \strokec6 (\cf5 \cb4 \strokec5 Bold\cf6 \cb4 \strokec6 )</\cf2 \strokec2 code\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                           \cf6 \strokec6 <\cf2 \strokec2 code className\cf6 \strokec6 =\cf7 \strokec7 "text-xs bg-slate-100 p-1 rounded border border-slate-300"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Google\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Fonts\cf6 \cb4 \strokec6 </\cf2 \strokec2 code\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "p-4 border border-slate-200 rounded-lg"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-slate-500 text-xs uppercase mb-1"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Cuerpo\cf2 \cb4 \strokec2  de \cf5 \cb4 \strokec5 Texto\cf2 \cb4 \strokec2  \cf6 \strokec6 (\cf5 \cb4 \strokec5 P\cf6 \cb4 \strokec6 )</\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 p className\cf6 \strokec6 =\cf7 \strokec7 "text-lg font-sans text-slate-600 mb-2"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Montserrat\cf6 \cb4 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex gap-2"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 code className\cf6 \strokec6 =\cf7 \strokec7 "text-xs bg-slate-100 p-1 rounded border border-slate-300"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Weight\cf6 \cb4 \strokec6 :\cf2 \strokec2  \cf9 \strokec9 400\cf2 \strokec2  \cf6 \strokec6 (\cf5 \cb4 \strokec5 Regular\cf6 \cb4 \strokec6 )</\cf2 \strokec2 code\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                            \cf6 \strokec6 <\cf2 \strokec2 code className\cf6 \strokec6 =\cf7 \strokec7 "text-xs bg-slate-100 p-1 rounded border border-slate-300"\cf6 \strokec6 >\cf5 \cb4 \strokec5 Google\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Fonts\cf6 \cb4 \strokec6 </\cf2 \strokec2 code\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                        \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                  \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4               \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\
+\cb4            \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "mt-12 pt-8 border-t border-slate-200"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-2 mb-4"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf5 \cb4 \strokec5 MousePointer\cf2 \cb4 \strokec2  className\cf6 \strokec6 =\cf7 \strokec7 "text-brand-cyan"\cf2 \strokec2  size\cf6 \strokec6 =\{\cf9 \strokec9 20\cf6 \strokec6 \}\cf2 \strokec2  />\cb1 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 h3 className\cf6 \strokec6 =\cf7 \strokec7 "text-lg font-bold text-navy-900 uppercase tracking-wider text-sm"\cf6 \strokec6 >\cf9 \strokec9 3\cf6 \strokec6 .\cf2 \strokec2  \cf5 \cb4 \strokec5 Estilo\cf2 \cb4 \strokec2  de \cf5 \cb4 \strokec5 Botones\cf6 \cb4 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cb1 \
+\cb4                \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col md:flex-row gap-8 items-start"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 button className\cf6 \strokec6 =\cf7 \strokec7 "bg-brand-cyan text-navy-900 px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest shadow-lg transform hover:-translate-y-1 transition-transform"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf5 \cb4 \strokec5 Bot\cf10 \strokec10 \'f3\cf2 \cb4 \strokec2 n \cf5 \cb4 \strokec5 Principal\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 <\cf2 \strokec2 div className\cf6 \strokec6 =\cf7 \strokec7 "bg-slate-50 p-4 rounded-lg border border-slate-200 text-sm font-mono text-slate-600 w-full md:w-auto"\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb4 \strokec5 Background\cf6 \cb4 \strokec6 :\cf2 \strokec2  \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-navy-900"\cf6 \strokec6 >\cf10 \cb4 \strokec10 #\cf9 \cb4 \strokec9 5\cf5 \cb4 \strokec5 CE1E6\cf6 \cb4 \strokec6 </\cf2 \strokec2 span></p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb4 \strokec5 Text\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Color\cf6 \cb4 \strokec6 :\cf2 \strokec2  \cf6 \strokec6 <\cf2 \strokec2 span className\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-navy-900"\cf6 \strokec6 >\cf10 \cb4 \strokec10 #\cf9 \cb4 \strokec9 0\cf5 \cb4 \strokec5 F172A\cf6 \cb4 \strokec6 </\cf2 \strokec2 span></p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb4 \strokec5 Border\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Radius\cf6 \cb4 \strokec6 :\cf2 \strokec2  \cf9 \strokec9 50\cf2 \strokec2 px\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb4 \strokec5 Padding\cf6 \cb4 \strokec6 :\cf2 \strokec2  \cf9 \strokec9 15\cf2 \strokec2 px \cf9 \strokec9 30\cf2 \strokec2 px\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                      \cf6 \strokec6 <\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb4 \strokec5 Text\cf2 \cb4 \strokec2  \cf5 \cb4 \strokec5 Transform\cf6 \cb4 \strokec6 :\cf2 \strokec2  \cf5 \cb4 \strokec5 Uppercase\cf6 \cb4 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                   \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4                \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4            \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4       \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf2 \cb1 \strokec2 \
+\cb4   \cf6 \strokec6 );\cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb4 \strokec6 \};\cf2 \cb1 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb4 \strokec3 const\cf2 \strokec2  root \cf6 \strokec6 =\cf2 \strokec2  createRoot\cf6 \strokec6 (\cf2 \strokec2 document\cf6 \strokec6 .\cf2 \strokec2 getElementById\cf6 \strokec6 (\cf7 \strokec7 'root'\cf6 \strokec6 )!);\cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 root\cf6 \strokec6 .\cf2 \strokec2 render\cf6 \strokec6 (<\cf5 \cb4 \strokec5 App\cf2 \cb4 \strokec2  />\cf6 \strokec6 );\cf2 \cb1 \strokec2 \
+}
